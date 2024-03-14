@@ -1,0 +1,4 @@
+PACKAGES install-norec
+intel-cmt-cat
+msr-tools
+tmux
