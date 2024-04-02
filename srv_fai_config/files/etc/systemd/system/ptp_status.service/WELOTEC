@@ -1,0 +1,15 @@
+[Unit]
+Description=PTP sync status service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+#User=root
+Environment=PTP_STATUS_FOLDER=/var/lib/libvirt/images/ptp/
+Environment=PTP4L_SOCKET_PATH=/var/run/timemaster/ptp4l.<num>.socket
+ExecStart=/usr/local/sbin/ptp_status.sh
+
+[Install]
+WantedBy=multi-user.target

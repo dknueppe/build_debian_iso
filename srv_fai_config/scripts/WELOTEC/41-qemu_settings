@@ -1,0 +1,7 @@
+#!/bin/bash
+
+error=0; trap 'error=$(($?>$error?$?:$error))' ERR # save maximum error code
+
+ainsl -a /etc/modprobe.d/qemu-system-x86.conf "options kvm_intel nested=1 enable_apicv=n ple_gap=0 ple_window=0"
+ainsl /etc/modprobe.d/qemu-system-x86.conf "options vhost_net experimental_zcopytx=1"
+fcopy -M /etc/libvirt/hooks/qemu

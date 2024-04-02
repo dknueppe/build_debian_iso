@@ -1,0 +1,10 @@
+#!/bin/bash
+
+error=0; trap 'error=$(($?>$error?$?:$error))' ERR # save maximum error code
+
+fcopy -m root,root,0755 /usr/local/sbin/ptp_status.sh
+fcopy -M /etc/systemd/system/ptp_status.service
+$ROOTCMD ln -s /etc/systemd/system/ptp_status.service /etc/systemd/system/multi-user.target.wants/ptp_status.service
+
+fcopy -m root,root,0755 /usr/local/sbin/ssc600-setup.sh
+#fcopy -M /etc/systemd/system/ssc600setup.service

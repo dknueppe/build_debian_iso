@@ -1,0 +1,6 @@
+#!/bin/bash
+
+error=0; trap 'error=$(($?>$error?$?:$error))' ERR # save maximum error code
+
+ainsl /etc/motd "RSAPC MK2 test image - DO NOT USE IN PRODUCTION"
+ainsl -Q /etc/motd "          Image provided by Welotec"

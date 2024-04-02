@@ -1,0 +1,8 @@
+[Unit]
+Description=allocate cache ways for RT application
+
+[Service]
+ExecStart=/usr/local/sbin/cache_allocator.sh
+
+[Install]
+WantedBy=multi-user.target

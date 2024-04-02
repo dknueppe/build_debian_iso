@@ -2,11 +2,6 @@
 
 error=0; trap 'error=$(($?>$error?$?:$error))' ERR # save maximum error code
 
-# Disable systemd's network interface name management.
-# References:
-#   https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=863385
-#   https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/
-
 ainsl /etc/sysctl.conf vm.nr_hugepages=12
 ainsl /etc/sysctl.conf vkernel.nmi_watchdog=0
 ainsl /etc/sysctl.conf vkernel.sched_rt_runtime_us=-1
