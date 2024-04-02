@@ -16,6 +16,7 @@ libvirt-clients
 libvirt-daemon
 libvirt-daemon-driver-storage-rbd
 libvirt-daemon-system
+linux-perf
 nginx
 ntfs-3g
 openvswitch-switch
@@ -28,5 +29,5 @@ qemu-block-extra
 qemu-system-x86
 qemu-utils
 snmpd
-tuna
+tuned
 virtinst
