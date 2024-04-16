@@ -11,3 +11,5 @@ screen
 stress-ng
 sysfsutils
 tcpdump
+ethtool
+schedtool

@@ -3,7 +3,7 @@
 # do not use this if a menu will be presented
 [ "$flag_menu" ] && exit 0
 
-echo DEBIAN FAIBASE BOOKWORM64 SEAPATH_COMMON SEAPATH_HOST SEAPATH_COCKPIT WELOTEC
+echo DEBIAN FAIBASE BOOKWORM64 SEAPATH_COMMON SEAPATH_HOST WELOTEC
 
 [ "$flag_raid" ] && echo "SEAPATH_RAID"
 [ "$flag_raiddemo" ] && echo "SEAPATH_RAID SEAPATH_RAID_DEMO"
